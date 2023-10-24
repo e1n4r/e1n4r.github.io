@@ -4,3 +4,9 @@
     --main-blue: #00ADB5;
     --main-light: #EEEEEE;
 }
+
+
+body {
+    background-color: red;
+    color: blue;
+}
