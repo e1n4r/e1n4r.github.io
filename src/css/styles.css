@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* For some reason had to specify utf-8, or the CSS file would turn chinese in the browser */
+
 :root{
     --main-dark: #222831;
     --main-grey: #393E46;
@@ -8,15 +11,26 @@
 
 /* NAVIGATION */
 .navbar {
+    justify-content: center;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .nav-list {
     display: flex;
     flex-direction: row;
+    padding: 0;
+}
+
+.nav-home {
+}
+
+.nav-element {
+    list-style-type: none;
 }
 
 .nav-link {
     text-decoration: none;
+    margin: 8px;
 }
