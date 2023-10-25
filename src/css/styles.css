@@ -5,3 +5,18 @@
     --main-light: #EEEEEE;
 }
 
+
+/* NAVIGATION */
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-link {
+    text-decoration: none;
+}
