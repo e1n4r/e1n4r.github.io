@@ -6,6 +6,7 @@
     --main-grey: #393E46;
     --main-blue: #00ADB5;
     --main-light: #EEEEEE;
+    --main-light-transparent: rgba(238, 238, 238, 0.8);  /*Light color with 20% transparency*/
 }
 
 
@@ -24,6 +25,7 @@
 }
 
 .nav-home {
+    text-decoration: none;
 }
 
 .nav-element {
@@ -33,4 +35,24 @@
 .nav-link {
     text-decoration: none;
     margin: 8px;
+ }
+
+
+ /* INDEX CONTENT */
+.scroll-effect {
+    position: relative; /* Ensure it's a stacking context for the absolute positioned child */
+    background-image: url(../media/oslomet.jpg);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.index-container {
+    position: absolute; /* Absolute position the container */
+    top: 10rem; /* Some space between the nav-bar and the index-container */
+    background-color: var(--main-light-transparent); /* Using the transparent light color */
+    padding: 2rem; /* Some padding to ensure the text doesn't touch the edges of the container */
+    z-index: 1; /* Places the container above the background image */
 }
