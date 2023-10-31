@@ -17,12 +17,15 @@ body{
 
 /* NAVIGATION */
 .navbar {
+    position: fixed;
+    width: 100vw;
     background-color: var(--main-dark);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-content: center;
     display: flex;
     flex-direction: row;
-    align-items: center
+    align-items: center;
+    z-index: 2; /*Ensure navbar has the highest z-index*/
 }
 
 .nav-list {
@@ -32,8 +35,12 @@ body{
 }
 
 .nav-home {
+margin: 0 64px 0 0;
+}
+
+.nav-home-img {
     width: 60px;
-    margin: 8px 64px 8px 0;
+    margin: 8px 0;
 }
 
 .nav-element {
