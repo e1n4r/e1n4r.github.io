@@ -6,10 +6,14 @@
     --main-blue: #00ADB5;
     --main-light-transparent: rgba(238, 238, 238, 0.8);  /*Light color with 20% transparency*/
  }
+ body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
 
 .scroll-effect {
     position: relative; /* Ensure it's a stacking context for the absolute positioned child */
     background-image: url(../media/oslomet.jpg);
+    margin-top: 0;
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -23,4 +27,29 @@
     background-color: var(--main-light-transparent); /* Using the transparent light color */
     padding: 2rem; /* Some padding to ensure the text doesn't touch the edges of the container */
     z-index: 1; /* Places the container above the background image */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+@media (max-width: 1000px){
+    .index-container{
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+}
+@media (max-width: 800px){
+    .index-container{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
+@media (max-width: 600px){
+    .index-container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+.index-container h1 {
+    text-align: center;
 }
