@@ -7,15 +7,22 @@
     --main-blue: #00ADB5;
     --main-light: #EEEEEE;
     --main-light-transparent: rgba(238, 238, 238, 0.8);  /*Light color with 20% transparency*/
+    --oslomet-yellow: rgb(255, 220, 0)
 }
 
 
+body{
+    margin: 0;
+}
+
 /* NAVIGATION */
 .navbar {
+    background-color: var(--main-dark);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-content: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center
 }
 
 .nav-list {
@@ -25,7 +32,8 @@
 }
 
 .nav-home {
-    text-decoration: none;
+    width: 60px;
+    margin: 8px 64px 8px 0;
 }
 
 .nav-element {
@@ -34,7 +42,8 @@
 
 .nav-link {
     text-decoration: none;
-    margin: 8px;
+    margin: 8px 16px;
+    color: var(--oslomet-yellow);
  }
 
 
