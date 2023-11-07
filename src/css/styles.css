@@ -10,9 +10,14 @@
     --oslomet-yellow: rgb(255, 220, 0)
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body{
-    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* NAVIGATION */
@@ -54,9 +59,15 @@ margin: 0 64px 0 32px;
     font-size: 16px;
     text-transform: uppercase;
  }
- body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
+
+
+ /* FOOTER */
+
+footer {
+    background-color: var(--main-dark);
+    color: var(--oslomet-yellow);
+    width: 100%;
+}
 
 
  /* INDEX CONTENT */
