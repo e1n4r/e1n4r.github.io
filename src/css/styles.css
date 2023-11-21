@@ -31,14 +31,6 @@ body {
 h1 {
     text-align: center;
 }
-hr {
-    width:60%;
-    margin: auto;
-    height: 5rem;
-    border-style: none;
-}
-
-
 
 
                     /* ---- NAVIGATION - BIG SCREEN ---- */
@@ -71,7 +63,10 @@ margin-left: 32px;
 
 .nav-home-img {
     width: 60px;
-    margin: 8px 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .nav-element {
@@ -80,7 +75,10 @@ margin-left: 32px;
 
 .nav-link {
     text-decoration: none;
-    padding: 16px 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 24px;
+    padding-left: 24px;
     color: var(--oslomet-yellow);
     font-size: 16px;
     text-transform: uppercase;
@@ -115,7 +113,7 @@ margin-left: 32px;
         top: 0;
         background-color: var(--main-dark);
         flex-direction: column;
-        transform: translateY(-100%); /* moved off screen so it can slide in */
+        transform: translateY(-100%); /* Menu moved off screen so it can slide in */
     }
     
     #menu li a {
@@ -131,7 +129,10 @@ margin-left: 32px;
         width: 200px;
         height: 60px;
         border-color: var(--main-grey);
-        border-width: 2px 3px;
+        border-top-width: 2px;
+        border-bottom-width: 2px;
+        border-right-width: 3px;
+        border-left-width: 3px;
     }
 
     /* display list items when burger is clicked */
@@ -327,18 +328,20 @@ footer {
     }
 }
 
- /* OTHER CONTENT */
+
+                    /* ---- OTHER CONTENT ---- */
  
  .main-general {
     margin-top: 100px;
 }
+
 .main-general h1 {
     margin-bottom: 2rem;
 }
+
 .main-general h2 {
     text-align: center;
 }
-
 
  .columns-container {
     display: flex;
@@ -348,12 +351,10 @@ footer {
     flex-direction: row;
 }
 
-
 .img-column, .txt-column {
     display: flex; /* Makes the picture fill the img-column*/
     
 }
-
 
 .img-column {
     width: 30%;
@@ -376,6 +377,7 @@ footer {
     margin-left: 2rem;
     flex-direction: column;
 }
+
 .txt-column ul p {
     text-align: center;
 }
