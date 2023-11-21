@@ -4,6 +4,7 @@
 :root{
     --main-dark: #222831;
     --main-grey: #393E46;
+    --main-light-grey: #73777e;
     --main-blue: #00ADB5;
     --main-light: #EEEEEE;
     --main-light-transparent: rgba(238, 238, 238, 0.8);  /*Light color with 20% transparency*/
@@ -21,7 +22,7 @@ body{
 }
 
 
-/* NAVIGATION - BIG SCREEN*/
+/* ---- NAVIGATION - BIG SCREEN ---- */
 
 .navbar {
     position: fixed;
@@ -63,12 +64,11 @@ margin: 0 64px 0 32px;
 }
 
 .nav-link:hover {
-    background-color: var(--oslomet-yellow);
-    color: var(--main-dark);
+    background-color: var(--main-grey);
 }
 
 
-/* NAVIGATION - HAMBURGER  (!!make elements larger!!)*/
+/* ---- NAVIGATION - HAMBURGER ---- */
 
 /* actual icon from google fonts */
 .material-icons {
@@ -123,7 +123,27 @@ margin: 0 64px 0 32px;
 }
 
 
- /* FOOTER */
+/* ---TO TOP NAV --- */
+
+.go-to-top {
+    background-color: var(--main-grey);
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--main-light);
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+}
+
+
+.go-to-top:hover {
+background-color: var(--main-light-grey);
+color: var(--main-dark);
+}
+
+
+ /* ---- FOOTER ---- */
 
 footer {
     display: grid;
@@ -210,7 +230,7 @@ footer {
 }
 
 
- /* INDEX CONTENT */
+ /* ---- INDEX CONTENT ---- */
 
 .scroll-effect {
     position: relative; /* Ensure it's a stacking context for the absolute positioned child */
@@ -227,13 +247,22 @@ footer {
     position: relative; /* Absolute position the container */
     top: 10rem; /* Some space between the nav-bar and the index-container */
     background-color: var(--main-light-transparent); /* Using the transparent light color */
-    padding: 2rem; /* Some padding to ensure the text doesn't touch the edges of the container */
+    padding: 1.5rem; /* Some padding to ensure the text doesn't touch the edges of the container */
     z-index: 1; /* Places the container above the background image */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 10rem;
     margin-right: 10rem;
     max-height: 90vh;
     overflow: auto;
+}
+
+.index-container h1 {
+    margin-bottom: 3px;
+}
+
+.index-container h2 {
+    margin-top: 15px;
+    margin-bottom: 3px;
 }
 
 @media (max-width: 1200px) {
