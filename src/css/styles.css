@@ -327,18 +327,20 @@ footer {
     }
 }
 
- /* OTHER CONTENT */
+
+                    /* ---- OTHER CONTENT ---- */
  
  .main-general {
     margin-top: 100px;
 }
+
 .main-general h1 {
     margin-bottom: 2rem;
 }
+
 .main-general h2 {
     text-align: center;
 }
-
 
  .columns-container {
     display: flex;
@@ -348,12 +350,10 @@ footer {
     flex-direction: row;
 }
 
-
 .img-column, .txt-column {
     display: flex; /* Makes the picture fill the img-column*/
     
 }
-
 
 .img-column {
     width: 30%;
@@ -362,11 +362,12 @@ footer {
 }
 
 .img-column img {
-    max-height: 100%; /* Ensure image does not exceed column height */
+    height: 100%; /* Ensure image does not exceed column height */
     width: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Makes sure the image doesnt strecth */
     overflow: hidden;
     justify-self: center;
+    margin: auto;
 }
 
 .txt-column {
@@ -375,6 +376,7 @@ footer {
     margin-left: 2rem;
     flex-direction: column;
 }
+
 .txt-column ul p {
     text-align: center;
 }
