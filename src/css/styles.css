@@ -13,6 +13,7 @@
 
 body{
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* NAVIGATION */
@@ -52,12 +53,17 @@ margin: 0 64px 0 0;
     margin: 8px 16px;
     color: var(--oslomet-yellow);
  }
- body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ /* INDEX CONTENT */
+ .body-index {
+    background-image: url(../media/oslomet.jpg);
+    margin-top: 0;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
  }
 
-
- /* INDEX CONTENT */
 .scroll-effect {
     position: relative; /* Ensure it's a stacking context for the absolute positioned child */
     background-image: url(../media/oslomet.jpg);
