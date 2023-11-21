@@ -3,6 +3,7 @@
 
                     /* ---- COMMON ELEMENTS ---- */
 
+/* global color scheme */
 :root{
     --main-dark: #222831;
     --main-grey: #393E46;
@@ -28,6 +29,7 @@ body {
     background-size: cover;
 }
 
+/* all primary headings centered on page */
 h1 {
     text-align: center;
 }
@@ -40,7 +42,7 @@ h1 {
     width: 100vw;
     background-color: var(--main-dark);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* nav and footer has different font */
-    justify-content: left;
+    /* justify-content: left; */
     display: flex;
     flex-direction: row;
     align-items: center;

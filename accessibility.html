@@ -37,28 +37,58 @@
         <h2>Testing with Lighthouse</h2>
         <div class="columns-container"> 
             <div class="img-column">
+                <!-- Photo: Screenshot of Google Chrome Lighthouse (Private) -->
                 <img src="src/media/lighthouse-test.png" alt="Showcase of the test software used">
             </div>
             <div class="txt-column">
-                <p>To make sure our website is up to date in terms of accessibility, we chose to test it with Google Chromes integrated program: Lighthouse.</p>
-                <p>Testing several aspects of our site, also including Performance and Best practices, allows for the best possible result.
+                <p>
+                    To make sure our website is up to date in terms of accessibility, we chose to test it with Google Chromes integrated program: Lighthouse.
+                </p>
+                <p>
+                    Testing several aspects of our site, also including Performance and Best practices, allows for the best possible result.
                     This was done both for mobile devices and desktop devices, thus making sure we kept both types of users in mind. 
+                </p>
+                <p>
+                    This is software we've tested with before and that we feel comfortable using. Both giving us a percentile score as well as more in depth comments to look through.
+                    This allows both for a quick feel for how well the page is laid out as well as discerning more specific problems.
+                </p>
+                <p>
+                    All five pages of our website were tested using this program, 
+                    as previously mentioned both with the desktop and the mobile setting, 
+                    below you can read a bit about the results these tests provided us with.
                 </p>
             </div>
         </div>
         <h2>Results for mobile and desktop</h2>
         <div class="columns-container"> 
             <div class="txt-column">
-                <p>After running our tests, the results came back pretty posistive! 
-                    Our colour choices seemed to be strong, contrast and visibility was good and the test gave us 100% for best practice</p>
+                <p>
+                    After running our tests, the results came back pretty posistive! 
+                    Our colour choices seemed to be strong, contrast and visibility were good and the site is friendly for people struggling with colour perception.
+                </p>
+                <p>
+                    In addition test gave us 100% for best practice accross the board, both for correct use of elements as well as remembering alt tags for pictures and similar semantics.
+                </p>
+                <p>
+                    One thing that did pop up as an issue was the performance for mobile, this was largely due to images being served as png or jpg, rather than "next-gen format" with better compression such as WebP and AVIF.
+                    In addition to this a couple of percentages was subtracted due to the sizing of images, however these images are supposed to be responsive based on the size of the viewport, and we're therefore happy with their current size.
+                </p>
+                <p>
+                    Other than that, we passed audits for things unused css, having correct meta tags, having valid "lang" attribute and having a title.
+                    Headings appear in sequentially descending order and all list items are contained within valid parent elements.
+                    The only issue that came up regarding accessibility was the fact that there is a "p"-tag inside an "ul", but since we don't use any javascript this shouldn't cause any problems.
+                </p>
+
             </div>
             <div class="img-column">
+                <!-- Photo: Screenshot of Google Chrome Lighthouse (Private) -->
                 <img src="src/media/accessibility-tests.jpg" alt="great lighthouse tests for desktop and mobile">
             </div>
         </div>
         <h2>Scalability and navigation</h2>
         <div class="columns-container"> 
             <div class="img-column">
+                <!-- Photo: Private -->
                 <img src="src/media/accesibility-code.png" alt="code showcasing code to scale objects based on screen size">
             </div>
             <div class="txt-column">
