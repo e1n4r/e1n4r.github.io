@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* For some reason had to specify utf-8, or the CSS file would turn chinese in the browser */
 
+                    /* ---- COMMON ELEMENTS ---- */
+
 :root{
     --main-dark: #222831;
     --main-grey: #393E46;
@@ -11,29 +13,31 @@
     --oslomet-yellow: rgb(255, 220, 0)
 }
 
+/* All elements set to the same baseline behaviour */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* specify font family across pages */
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
-/* ---- NAVIGATION - BIG SCREEN ---- */
+                    /* ---- NAVIGATION - BIG SCREEN ---- */
 
 .navbar {
-    position: fixed;
+    position: fixed; /* nav sticks to top of every page */
     width: 100vw;
     background-color: var(--main-dark);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* nav and footer has different font */
     justify-content: left;
     display: flex;
     flex-direction: row;
     align-items: center;
-    z-index: 2; /*Ensure navbar has the highest z-index*/
+    z-index: 2; /* Ensure navbar has the highest z-index */
 }
 
 .nav-list {
@@ -43,7 +47,10 @@ body{
 }
 
 .nav-home {
-margin: 0 64px 0 32px;
+margin-top: 0;
+margin-right: 64px;
+margin-bottom: 0;
+margin-left: 32px;
 }
 
 .nav-home-img {
@@ -68,14 +75,14 @@ margin: 0 64px 0 32px;
 }
 
 
-/* ---- NAVIGATION - HAMBURGER ---- */
+                    /* ---- NAVIGATION - SMALLSCREEN HAMBURGER ---- */
 
 /* actual icon from google fonts */
 .material-icons {
     font-size: 36px;
 }
 
-/* Colour and position hamburger, not normally displayed */
+/* Colour and position burger, which is not normally displayed */
 .hamburger {
     display: none;
     position: fixed;
@@ -84,7 +91,7 @@ margin: 0 64px 0 32px;
     right: 1rem;
 }
 
-/* Display burger and hide other elements when screen is small */
+/* Display burger and hide nav items when screen is small */
 @media (max-width: 800px) {
     #menu { 
         position: fixed;
@@ -92,7 +99,7 @@ margin: 0 64px 0 32px;
         top: 0;
         background-color: var(--main-dark);
         flex-direction: column;
-        transform: translateY(-100%);
+        transform: translateY(-100%); /* moved off screen so it can slide in */
     }
     
     #menu li a {
@@ -111,6 +118,7 @@ margin: 0 64px 0 32px;
         border-width: 2px 3px;
     }
 
+    /* display list items when burger is clicked */
     #menu:target {
         transition: transform 0.3s ease;
         transform: translateY(0);
@@ -123,8 +131,9 @@ margin: 0 64px 0 32px;
 }
 
 
-/* ---TO TOP NAV --- */
+                    /* ----TO TOP NAV ---- */
 
+/* btn gets you to top of current page */
 .go-to-top {
     background-color: var(--main-grey);
     border-radius: 10px;
@@ -136,16 +145,16 @@ margin: 0 64px 0 32px;
     bottom: 3rem;
 }
 
-
 .go-to-top:hover {
 background-color: var(--main-light-grey);
 color: var(--main-dark);
 }
 
 
- /* ---- FOOTER ---- */
+                     /* ---- FOOTER ---- */
 
 footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: grid;
     background-color: var(--main-dark);
     color: var(--oslomet-yellow);
@@ -153,6 +162,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    font-size: 16px;
 }
 
 .footer-copyright {
@@ -230,10 +240,11 @@ footer {
 }
 
 
- /* ---- INDEX CONTENT ---- */
+                     /* ---- INDEX CONTENT ---- */
 
+ /* fixed background that other content moves across */
 .scroll-effect {
-    position: relative; /* Ensure it's a stacking context for the absolute positioned child */
+    position: relative;
     background-image: url(../media/oslomet.jpg);
     margin-top: 0;
     min-height: 100vh;
@@ -244,16 +255,19 @@ footer {
 }
 
 .index-container {
-    position: relative; /* Absolute position the container */
+    position: relative;
     top: 10rem; /* Some space between the nav-bar and the index-container */
     background-color: var(--main-light-transparent); /* Using the transparent light color */
     padding: 1.5rem; /* Some padding to ensure the text doesn't touch the edges of the container */
-    z-index: 1; /* Places the container above the background image */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 10rem;
     margin-right: 10rem;
     max-height: 90vh;
     overflow: auto;
+}
+
+/* looks prettier with scrollbar hidden */
+.index-container::-webkit-scrollbar {
+    display: none;
 }
 
 .index-container h1 {
@@ -264,6 +278,7 @@ footer {
     margin-top: 15px;
     margin-bottom: 3px;
 }
+
 
 @media (max-width: 1200px) {
     .index-container{
