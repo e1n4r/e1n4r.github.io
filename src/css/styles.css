@@ -90,6 +90,10 @@ margin-left: 32px;
     background-color: var(--main-grey);
 }
 
+.nav-link:active {
+    background-color: var(--main-light-grey);
+}
+
 
                     /* ---- NAVIGATION - SMALLSCREEN HAMBURGER ---- */
 
@@ -169,6 +173,10 @@ background-color: var(--main-light-grey);
 color: var(--main-dark);
 }
 
+.go-to-top:active {
+    background-color: var(--main-grey);
+    columns: var(--main-light-grey);
+}
 
                      /* ---- FOOTER ---- */
 
