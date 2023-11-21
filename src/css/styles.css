@@ -393,17 +393,21 @@ footer {
 
 @media (max-width: 800px){
     .columns-container {
-        flex-direction: column; /* Stacks the columns vertically instead of horizontally when width>800px*/
-        height: 80vh; /*Increases the height of the container in this view.*/
+        /* Stacks the columns vertically instead of horizontally when width<800px*/
+        flex-direction: column; 
+        /*Increases the height of the container in this view.*/
+        height: 80vh; 
     }
     .img-column {
-        margin: auto; /*Aligns the column to the center*/
+        /*Aligns the column to the center*/
+        margin: auto; 
         margin-bottom: 2rem;
-        order: 0; /* Puts the img-column before the txt-column when width>800px*/
+        /* Puts the img-column before the txt-column when width<800px*/
+        order: 0;
     }
     .txt-column {
-        margin: auto; /*Aligns the column to the center*/
+        /*Aligns the column to the center*/
+        margin: auto;
         order: 1;
     }
-
 }
