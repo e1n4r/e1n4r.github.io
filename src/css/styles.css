@@ -194,17 +194,20 @@ footer {
     font-size: 16px;
 }
 
+/* specifies size of and position of copyright content */
 .footer-copyright {
     grid-column: 1/2;
     width: 300px;
     margin-left: 20px;
 }
 
+/* puts logo in middle and specifies size */
 .footer-logo{
     grid-column: 2/3;
     width: 80px;
 }
 
+/* puts contact to the right, in the last column, removes unnecesary decoration and colours it in line with the rest */
 .footer-contact{
     grid-column: 3/4;
     text-align: right;
@@ -214,8 +217,9 @@ footer {
     margin-right: 20px;
 }
 
-
+/* Scales content by screen size */
 @media (max-width: 800px) {
+    /* Centers items and stacks logo on top of the other two elements  when screen is narrow*/
     footer {
         justify-items: center;
         justify-content: space-evenly;
@@ -241,6 +245,7 @@ footer {
 }
 
 @media (max-width: 600px) {
+    /* Centers items and stacks all three elements on top of each other when screen is even narrower */
     footer {
         justify-items: center;
         justify-content: center;  
@@ -310,6 +315,7 @@ footer {
 }
 
 
+/* For accesibility, padding decreases incrementally with screen size */
 @media (max-width: 1200px) {
     .index-container{
         top: 8rem;
