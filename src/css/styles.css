@@ -21,9 +21,24 @@
 }
 
 /* specify font family across pages */
-body{
+body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(../media/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+h1 {
+    text-align: center;
+}
+hr {
+    width:60%;
+    margin: auto;
+    height: 5rem;
+    border-style: none;
+}
+
+
 
 
                     /* ---- NAVIGATION - BIG SCREEN ---- */
@@ -38,6 +53,7 @@ body{
     flex-direction: row;
     align-items: center;
     z-index: 2; /* Ensure navbar has the highest z-index */
+    top: 0;
 }
 
 .nav-list {
@@ -245,6 +261,7 @@ footer {
  /* fixed background that other content moves across */
 .scroll-effect {
     position: relative;
+    /* Image copied from https://oslomet.no/en/about/get-to-know-oslomet */
     background-image: url(../media/oslomet.jpg);
     margin-top: 0;
     min-height: 100vh;
@@ -310,6 +327,80 @@ footer {
     }
 }
 
-.index-container h1 {
+ /* OTHER CONTENT */
+ 
+ .main-general {
+    margin-top: 100px;
+}
+.main-general h1 {
+    margin-bottom: 2rem;
+}
+.main-general h2 {
     text-align: center;
+}
+
+
+ .columns-container {
+    display: flex;
+    height: 60vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: row;
+}
+
+
+.img-column, .txt-column {
+    display: flex; /* Makes the picture fill the img-column*/
+    
+}
+
+
+.img-column {
+    width: 30%;
+    height: auto;
+    flex-direction: row; /* Multiple images in the same img-column is stacked horizontally */
+}
+
+.img-column img {
+    max-height: 100%; /* Ensure image does not exceed column height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Makes sure the image doesnt strecth */
+    overflow: hidden;
+    justify-self: center;
+}
+
+.txt-column {
+    width: 70%;
+    overflow: auto;
+    margin-left: 2rem;
+    flex-direction: column;
+}
+.txt-column ul p {
+    text-align: center;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.txt-column::-webkit-scrollbar {
+    display: none;
+  }
+  
+.columns-container li,.columns-container h2,.columns-container p{
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 800px){
+    .columns-container {
+        flex-direction: column; /* Stacks the columns vertically instead of horizontally when width>800px*/
+        height: 80vh; /*Increases the height of the container in this view.*/
+    }
+    .img-column {
+        margin: auto; /*Aligns the column to the center*/
+        margin-bottom: 2rem;
+        order: 0; /* Puts the img-column before the txt-column when width>800px*/
+    }
+    .txt-column {
+        margin: auto; /*Aligns the column to the center*/
+        order: 1;
+    }
+
 }
